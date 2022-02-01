@@ -38,7 +38,8 @@ def get_large_audio_transcription(path):
             try:
                 text = r.recognize_google(audio_listened)
             except sr.UnknownValueError as e:
-                print("Error:", str(e))
+                # print("Error:", str(e))
+                pass
             else:
                 text = f"{text.capitalize()}. "
                 #print(chunk_filename, ":", text)
